@@ -2,6 +2,13 @@
 //2. it should have a `name` and `done` properties and a `toggleDone` method which toggles the done property from true to false and vice-versa
 class ToDoItem{
     
+    constructor(name, done){
+        this.name;
+        this.done;
+        toggleDone(done);
+    }
+    
+    
 }
 
 
