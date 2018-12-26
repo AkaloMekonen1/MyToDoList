@@ -5,9 +5,9 @@ class ToDoItem{
     constructor(name, done){
         this.name;
         this.done;
-        toggleDone(done);
+        
     }
-    
+    toggleDone(done);
     
 }
 
