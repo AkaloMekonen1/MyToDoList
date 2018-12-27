@@ -6,7 +6,9 @@ function ToDoItem(name, done){
 this.name = name;
 this.done = done;
 }
-
+ToDoItem.prototype.toggleDone = function(){
+    
+}
 
 //If you write it correctly the following code should work:
 
