@@ -2,19 +2,9 @@
 //2. it should have a `name` and `done` properties and a `toggleDone` method which toggles the done property from true to false and vice-versa
 
 //write your code here..
-class ToDoItem{
-    
-    constructor(name, done){
-        this.name;
-        this.done;
-        
-    }
-    toggleDone(){
-        $("done").toggle()
-    }
-    
-}
+function ToDoItem(name, done){
 
+}
 
 
 //If you write it correctly the following code should work:
