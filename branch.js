@@ -3,7 +3,8 @@
 
 //write your code here..
 function ToDoItem(name, done){
-
+this.name = name;
+this.done = done;
 }
 
 
