@@ -3,16 +3,18 @@
 
 //write your code here..
 function ToDoItem(name, done){
-    this.name = name;
-    this.done = done;  
+this.name = name;
+this.done = done;
 }
 ToDoItem.prototype.toggleDone = function(){
     if(this.done = 1){
         this.done = 0;
     }else if(this.done = 0){
-        this.done = 1; 
-}
+        this.done = 1;
+
+    }
     
+}
 
 //If you write it correctly the following code should work:
 
