@@ -1,25 +1,18 @@
 //1. create a ToDoItem class
 //2. it should have a `name` and `done` properties and a `toggleDone` method which toggles the done property from true to false and vice-versa
-class ToDoItem{
-    
-    constructor(name, done){
-        this.name;
-        this.done;
-        
-    }
-    toggleDone(done);
-    
-}
-
 
 //write your code here..
-
-
+function ToDoItem(){
+    this.name = name;
+    this.done = done;
+    
+}
+    
 
 //If you write it correctly the following code should work:
 
 var toDoItem1 = new ToDoItem('wake up')
-var toDoItem2 = new TodItem('eat breakfast')
+var toDoItem2 = new ToDoItem('eat breakfast')
 var toDoItem3 = new ToDoItem('go to work')
 
 toDoItem1.toggleDone()
