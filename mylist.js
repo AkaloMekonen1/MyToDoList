@@ -8,9 +8,7 @@ function ToDoItem(name){
 }
 
 ToDoItem.prototype.toggleDone = function(){
-    if (this.done === true){
-        this.done = false;
-    }else this.done = true;
+    this.done = !this.done;
 }
 
 //If you write it correctly the following code should work:
