@@ -21,7 +21,7 @@ var toDoItem3 = new ToDoItem('go to work')
 
 toDoItem1.toggleDone()
 toDoItem2.toggleDone()
-toDoItem3.toggleDone()
+toDoItem2.toggleDone()
 
 console.log(toDoItem1.name) // should print 'wake up'
 console.log(toDoItem1.done) // should print: true
