@@ -2,18 +2,13 @@
 //2. it should have a `name` and `done` properties and a `toggleDone` method which toggles the done property from true to false and vice-versa
 
 //write your code here..
-function ToDoItem(name, done){
-this.name = name;
-this.done = done;
+function ToDoItem(name){
+    this.name = name;
+    this.done = true;
 }
-ToDoItem.prototype.toggleDone = function(){
-    if(this.done = 1){
-        this.done = 0;
-    }else if(this.done = 0){
-        this.done = 1;
 
-    }
-    
+ToDoItem.prototype.toggleDone = function(){
+    this.done = !this.done;
 }
 
 //If you write it correctly the following code should work:
@@ -32,3 +27,4 @@ console.log(toDoItem2.name) // should print: 'eat breakfast'
 console.log(toDoItem2.done) // should print: false
 console.log(toDoItem3.name) // should print: 'go to work'
 console.log(toDoItem3.done) // should print: false
+
