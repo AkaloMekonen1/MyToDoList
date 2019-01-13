@@ -27,3 +27,8 @@ console.log(toDoItem2.name) // should print: 'eat breakfast'
 console.log(toDoItem2.done) // should print: false
 console.log(toDoItem3.name) // should print: 'go to work'
 console.log(toDoItem3.done) // should print: false
+
+function List(){
+    this.list = [];
+}
+
