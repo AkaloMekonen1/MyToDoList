@@ -31,4 +31,7 @@ console.log(toDoItem3.done) // should print: false
 function List(){
     this.list = [];
 }
+List.prototype.add = function(name){
+    var item = new ToDoItem(name);
+}
 
