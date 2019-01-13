@@ -31,7 +31,23 @@ console.log(toDoItem3.done) // should print: false
 
 function List(){
    
-    this.list = list;
-    
-
+    this.list = [];
 }
+
+List.prototype.add = function(name){
+    var item = new ToDoItem(name);
+     this.list.push(name);
+}
+
+var shoppingList = new List();
+shoppingList.add('milk');
+shoppingList.add('bread');
+shoppingList.add('eggs');
+shoppingList[1].toggleDone()
+
+console.log(shoppingList[1].done) //should be true
+console.log(shoppingList[1].name) //should be bread
+console.log(shoppingList[2].done) //should be false
+console.log(shoppingList[2].name) //should be eggs
+console.log(shoppingList[0].name) //should be milk
+console.log(shoppingList[0].name) //should be false
