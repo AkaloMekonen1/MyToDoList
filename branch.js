@@ -39,6 +39,7 @@ List.prototype.add = function(name){
      this.list.push(name);
 }
 List.prototype.remove = function(item){
+    var removeItem = item.splice();
 
 }
 
