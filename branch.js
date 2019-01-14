@@ -38,8 +38,8 @@ List.prototype.add = function(name){
     var item = new ToDoItem(name);
      this.list.push(name);
 }
-List.prototype.remove = function(){
-    
+List.prototype.remove = function(item){
+
 }
 
 var shoppingList = new List();
