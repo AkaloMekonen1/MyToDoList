@@ -36,7 +36,7 @@ function List(){
 
 List.prototype.add = function(name){
     var item = new ToDoItem(name);
-     this.list.push(name);
+     this.list.push(item);
 }
 List.prototype.remove = function(item){
     var removeItem = item.splice();
