@@ -30,6 +30,7 @@ toDoItem2.toggleDone()
 
 function List(){
     this.list = [];
+
 }
 List.prototype.add = function(name){
     var item = new ToDoItem(name);
@@ -37,7 +38,7 @@ List.prototype.add = function(name){
 }
 
 List.prototype.remove = function(item){
-    var removeItem = item.splice(this.list, this.list.length);
+    var removeItem = this.list.splice(this.list[0], this.list.length);
 }
 
 // var shoppingList = new List();
