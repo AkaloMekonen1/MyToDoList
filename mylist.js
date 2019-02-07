@@ -13,20 +13,15 @@ ToDoItem.prototype.toggleDone = function(){
 
 //If you write it correctly the following code should work:
 
-var toDoItem1 = new ToDoItem('wake up')
-var toDoItem2 = new ToDoItem('eat breakfast')
-var toDoItem3 = new ToDoItem('go to work')
+// var toDoItem1 = new ToDoItem('wake up')
+// var toDoItem2 = new ToDoItem('eat breakfast')
+// var toDoItem3 = new ToDoItem('go to work')
 
-toDoItem1.toggleDone()
-toDoItem2.toggleDone()
-toDoItem2.toggleDone()
+// toDoItem1.toggleDone()
+// toDoItem2.toggleDone()
+// toDoItem2.toggleDone()
 
-// console.log(toDoItem1.name) // should print 'wake up'
-// console.log(toDoItem1.done) // should print: true
-// console.log(toDoItem2.name) // should print: 'eat breakfast'
-// console.log(toDoItem2.done) // should print: false
-// console.log(toDoItem3.name) // should print: 'go to work'
-// console.log(toDoItem3.done) // should print: false
+
 
 function List(){
     this.list = [];
@@ -37,18 +32,17 @@ List.prototype.add = function(name){
     this.list.push(item);
 }
 
-List.prototype.remove = function(item){
-    var removeItem = this.list.splice(this.list[0], this.list.length);
+List.prototype.remove = function(name){
+    var indexToRemove = name.split(' ');
+    this.list.splice(indexToRemove,3);
+    console.log(this.list);
+    
 }
 
-// var shoppingList = new List();
-// shoppingList.add('milk');
-// shoppingList.add('bread');
-// shoppingList.add('eggs');
-// shoppingList.list[1].toggleDone();
-// console.log(shoppingList.list[1].done); //should be true
-// console.log(shoppingList.list[1].name); //should be bread
-// console.log(shoppingList.list[2].done); //should be false
-// console.log(shoppingList.list[2].name); //should be eggs
-// console.log(shoppingList.list[0].name); //should be milk
-// console.log(shoppingList.list[0].name); //should be false
+var myList = new List();
+myList.add("wake up");
+myList.add("eat");
+myList.add("go to work");
+myList.add("back from work");
+myList.add("go to sleep");
+myList.remove(name);
