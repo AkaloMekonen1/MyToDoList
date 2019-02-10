@@ -33,10 +33,10 @@ List.prototype.add = function(name){
 }
 
 List.prototype.remove = function(name){
-    var indexToRemove = name.split(' ');
-    this.list.splice(indexToRemove,3);
+    var indexToRemove = name;
+    this.list.splice(indexToRemove,2);
     console.log(this.list);
-    
+    debugger;
 }
 
 var myList = new List();
@@ -45,4 +45,4 @@ myList.add("eat");
 myList.add("go to work");
 myList.add("back from work");
 myList.add("go to sleep");
-myList.remove(name);
+myList.remove("wake up");
