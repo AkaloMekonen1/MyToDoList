@@ -30,13 +30,18 @@ function List(){
 List.prototype.add = function(name){
     var item = new ToDoItem(name);
     this.list.push(item);
+    
 }
 
 List.prototype.remove = function(name){
-    var indexToRemove = name;
-    this.list.splice(indexToRemove,2);
     console.log(this.list);
+    var indexToRemove = this.list.findIndex(function(listItem){
+        // if(this.done === true){ elment = name}
+        return listItem.name === name
+    });
     debugger;
+    this.list.splice(indexToRemove,1);
+    console.log(this.list);
 }
 
 var myList = new List();
@@ -46,3 +51,6 @@ myList.add("go to work");
 myList.add("back from work");
 myList.add("go to sleep");
 myList.remove("wake up");
+myList.remove("go to work");
+myList.remove("eat");
+myList.remove("back from work");
