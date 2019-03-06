@@ -33,15 +33,20 @@ List.prototype.add = function(name){
     
 }
 
-List.prototype.remove = function(name){
-    console.log(this.list);
+List.prototype.remove = function(name){  
     var indexToRemove = this.list.findIndex(function(listItem){
         // if(this.done === true){ elment = name}
         return listItem.name === name
     });
-    debugger;
     this.list.splice(indexToRemove,1);
-    console.log(this.list);
+}
+
+List.prototype.toggleDone = function(name){
+    var item = this.list.find(function(item){
+       return item.name === name
+    })
+    item.toggleDone()
+    // console.log('item to toggle',item)
 }
 
 var myList = new List();
@@ -54,3 +59,4 @@ myList.remove("wake up");
 myList.remove("go to work");
 myList.remove("eat");
 myList.remove("back from work");
+myList.toggleDone('go to sleep');
