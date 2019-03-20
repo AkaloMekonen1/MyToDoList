@@ -16,7 +16,7 @@ function List(){
 List.prototype.add = function(name){
     var item = new ToDoItem(name);
     this.list.push(item);
-    
+    console.log('drink and eat');
 }
 
 List.prototype.remove = function(name){  
