@@ -6,6 +6,7 @@ function ToDoItem(name){
 
 ToDoItem.prototype.toggleDone = function(){
     this.done = !this.done;
+    this.element.classList.add('list-item');
 }
 
 
@@ -22,15 +23,15 @@ List.prototype.add = function(name){
 List.prototype.remove = function(name){  
     var indexToRemove = this.list.findIndex(function(listItem){
         
-        return listItem.name === name
+        return listItem.name === name;
     });
     this.list.splice(indexToRemove,1);
 }
 
 List.prototype.toggleDone = function(name){
     var item = this.list.find(function(item){
-       return item.name === name
+       return item.name === name;
     })
-    item.toggleDone()
+    item.toggleDone();
 }
 
