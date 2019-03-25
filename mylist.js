@@ -6,10 +6,7 @@ function ToDoItem(name){
 
 ToDoItem.prototype.toggleDone = function(){
     this.done = !this.done;
-    this.element.classList.add('list-item');
 }
-
-
 
 function List(){
     this.list = [];
@@ -35,3 +32,6 @@ List.prototype.toggleDone = function(name){
     item.toggleDone();
 }
 
+ToDoItem.prototype.addList = function(){
+    this.element.classList.add('list-item');
+}
