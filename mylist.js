@@ -1,7 +1,7 @@
 function ToDoItem(name){
     this.name = name;
     this.done = false;
-    this.element = document.creatElement('li')
+    this.element = document.creatElement('li').textContent
 }
 
 ToDoItem.prototype.toggleDone = function(){
