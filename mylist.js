@@ -1,20 +1,25 @@
 function ToDoItem(name){
     this.name = name;
     this.done = false;
-    this.element = document.creatElement('li').textContent
+    this.element = document.createElement('li')
+    this.element.textContent = name;
+    this.element.classList.add('list-item');
 }
 
 ToDoItem.prototype.toggleDone = function(){
     this.done = !this.done;
 }
 
-function List(){
+function List(elem){
     this.list = [];
+    this.element = elem
 
 }
+
 List.prototype.add = function(name){
     var item = new ToDoItem(name);
     this.list.push(item);
+    this.element.appendChild(item.element)
 }
 
 List.prototype.remove = function(name){  
@@ -32,6 +37,3 @@ List.prototype.toggleDone = function(name){
     item.toggleDone();
 }
 
-ToDoItem.prototype.addList = function(){
-    this.element.classList.add('list-item');
-}
