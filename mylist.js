@@ -12,14 +12,14 @@ ToDoItem.prototype.toggleDone = function(){
 
 function List(elem){
     this.list = [];
-    this.element = elem
+    this.element = elem;
 
 }
 
 List.prototype.add = function(name){
     var item = new ToDoItem(name);
     this.list.push(item);
-    this.element.appendChild(item.element)
+    this.element.appendChild(item.element);
 }
 
 List.prototype.remove = function(name){  
@@ -28,6 +28,9 @@ List.prototype.remove = function(name){
         return listItem.name === name;
     });
     this.list.splice(indexToRemove,1);
+    var elementToRemove = document.getElementById('list')
+    elementToRemove.removeChild(item.element)
+    
 }
 
 List.prototype.toggleDone = function(name){
