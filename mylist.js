@@ -29,7 +29,7 @@ List.prototype.remove = function(name){
     });
     this.list.splice(indexToRemove,1);
     var elementToRemove = document.getElementById('list')
-    elementToRemove.removeChild(item.element)
+    elementToRemove.removeChild(elem)
     
 }
 
