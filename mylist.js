@@ -8,8 +8,9 @@ function ToDoItem(name){
 
 ToDoItem.prototype.toggleDone = function(){
     this.done = !this.done;
+    this.element = document.getElementsByClassName("done")
     if(this.done){
-        this.element.removeChild(item.element);
+        this.element.remove.done;
     }
 }
 
@@ -32,7 +33,7 @@ List.prototype.remove = function(name){
     });
     this.list.splice(indexToRemove,1);
     var elementToRemove = document.getElementById('list')
-    elementToRemove.removeChild(elem)
+    elementToRemove.removeChild(name)
 }
 
 List.prototype.toggleDone = function(name){
