@@ -8,6 +8,9 @@ function ToDoItem(name){
 
 ToDoItem.prototype.toggleDone = function(){
     this.done = !this.done;
+    if(this.done){
+        this.element.removeChild(item.element);
+    }
 }
 
 function List(elem){
@@ -30,7 +33,6 @@ List.prototype.remove = function(name){
     this.list.splice(indexToRemove,1);
     var elementToRemove = document.getElementById('list')
     elementToRemove.removeChild(elem)
-    
 }
 
 List.prototype.toggleDone = function(name){
