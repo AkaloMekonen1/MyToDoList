@@ -1,4 +1,13 @@
+.list-item {
+    font-weight: bold;
+    color: blue;
+}
+
+
 .done{
     text-decoration: line-through;
+    color: green;
+    transform: scale(1.2);
+    transition: transform 1s;
 }
 
