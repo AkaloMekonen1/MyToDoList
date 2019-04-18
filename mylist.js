@@ -2,9 +2,11 @@ function ToDoItem(name){
     this.name = name;
     this.done = false;
     this.element = document.createElement('li')
+    this.clickBtn = document.getElementById('AddButton')
+    // this.placeholder = document.getElementById('ListName')
     this.element.textContent = name;
     this.element.classList.add('list-item');
-    this.element.addEventListener('click',()=>this.toggleDone())
+    this.clickBtn.addEventListener('click',()=>this.toggleDone())
 }
 
 ToDoItem.prototype.toggleDone = function(){
@@ -25,6 +27,7 @@ List.prototype.add = function(name){
     var item = new ToDoItem(name);
     this.list.push(item);
     this.element.appendChild(item.element);
+    // this.element = document.getElementById('ListName').value
 }
 
 List.prototype.remove = function(name){  
@@ -33,14 +36,13 @@ List.prototype.remove = function(name){
         return listItem.name === name;
     });
     this.list.splice(indexToRemove,1);
-    var elementToRemove = document.getElementById('list')
-    elementToRemove.removeChild(name)
 }
 
-// List.prototype.toggleDone = function(name){
-//     var item = this.list.find(function(item){
-//        return item.name === name;
-//     })
-//     item.toggleDone();
-// }
+List.prototype.toggleDone = function(name){
+    var item = this.list.find(function(item){
+       return item.name === name;
+    })
+    item.toggleDone();
+}
 
+var myList = new List(document.getElementById('list'));

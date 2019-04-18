@@ -6,8 +6,22 @@
 
 .done{
     text-decoration: line-through;
-    color: green;
     transform: scale(1.2);
     transition: transform 1s;
 }
 
+.header{
+    background-color: #F0FFF0;
+    padding-top: 32px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+input{
+    width: 25%;
+}
+li{
+    background-color: bisque;
+}
