@@ -3,10 +3,8 @@ function ToDoItem(name){
     this.done = false;
     this.element = document.createElement('li')
     this.element.textContent = name;
-    // name = document.getElementById('ListName')
     this.element.classList.add('list-item');
-    this.clickBtn = document.getElementById('AddButton');
-    this.clickBtn.addEventListener('click',()=>this.toggleDone());
+    this.element.addEventListener('click',this.toggleDone.bind(this))
 }
 
 ToDoItem.prototype.toggleDone = function(){
@@ -18,19 +16,29 @@ ToDoItem.prototype.toggleDone = function(){
         }
 }
 
-function List(elem){
+function List(elem,input,button){
+
     this.list = [];
     this.element = elem;
+    this.input = input;
+    this.button = button;
+    this.button.addEventListener('click',this.add.bind(this))
+    this.input.addEventListener('keydown',(event)=> {
+        if(event.key === 'Enter'){
+            this.add()}
+    })
 }
 
-List.prototype.add = function(name){
+List.prototype.add = function(){
+    
+    var name = this.input.value;
     var item = new ToDoItem(name);
     this.list.push(item);
-    // item.element = document.getElementById('ListName').value;
-    // name = document.createTextNode(item.element);
-    // this.element.appendChild(name);
     this.element.appendChild(item.element);
-    // document.getElementById('list').appendChild(item.element);
+    var ListButton = document.createElement('button');
+    this.element.appendChild(ListButton);
+    ListButton.innerText = "x"
+    this.input.value = '';
 }
 
 List.prototype.remove = function(name){  
@@ -48,4 +56,9 @@ List.prototype.toggleDone = function(name){
     item.toggleDone();
 }
 
-var myList = new List(document.getElementById("list"));
+var myList = new List(
+    document.getElementById("list"),
+    document.getElementById('ListInput'),
+    document.getElementById('AddButton')
+    );
+    
