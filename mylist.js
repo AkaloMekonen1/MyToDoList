@@ -27,6 +27,9 @@ function List(elem,input,button){
         if(event.key === 'Enter'){
             this.add()}
     })
+    this.elm.addEventListener('click',function(event){
+        console.log(event);
+      })
 }
 
 List.prototype.add = function(){
